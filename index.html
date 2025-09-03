@@ -7,6 +7,120 @@
     <title>Portfolio Git</title>
 
 </head>
+<style>
+        /* Reset básico */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(120deg, #f4f4f4 60%, #e3eafc 100%);
+            color: #222;
+        }
+
+        header {
+            background: linear-gradient(90deg, #222 60%, #3a3a3a 100%);
+            color: #fff;
+            padding: 2.5rem 0 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.85;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 2.5rem auto;
+            background: #fff;
+            padding: 2.5rem 2rem;
+            border-radius: 14px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.09);
+        }
+
+        section {
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        section img {
+            display: block;
+            max-width: 320px;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 0.5rem auto 1.2rem auto;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+        }
+
+        h2 {
+            color: #2a4d8f;
+            font-size: 1.7rem;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+
+        p {
+            color: #444;
+            font-size: 1.08rem;
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        ul li, ol li {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        code {
+            background: #e3eafc;
+            color: #2a4d8f;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.97em;
+        }
+
+        strong {
+            color: #2a4d8f;
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            .container {
+                padding: 1.2rem 0.5rem;
+            }
+            header h1 {
+                font-size: 1.6rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
+            section img {
+                max-width: 100%;
+            }
+        }
+    </style>
 
 <body>
     <header>
@@ -125,7 +239,8 @@
                         conflito.</li>
                     <li>Abra o arquivo indicado e procure por marcações como
                         <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> e
-                        <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; branch</code>.</li>
+                        <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; branch</code>.
+                    </li>
                     <li>Escolha qual versão manter ou combine as alterações.</li>
                     <li>Remova as marcações do Git.</li>
                     <li>Adicione o arquivo resolvido ao stage: <code>git add arquivo</code></li>
