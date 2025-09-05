@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Git</title>
-
-</head>
-<style>
-        /* Reset básico */
+    
+    <style>
+        /* Reset básico  */
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
+        /* Body e fontes  */
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
             background: linear-gradient(120deg, #f4f4f4 60%, #e3eafc 100%);
             color: #222;
         }
 
+        /* Header  */
         header {
             background: linear-gradient(90deg, #222 60%, #3a3a3a 100%);
             color: #fff;
@@ -40,6 +40,7 @@
             opacity: 0.85;
         }
 
+        /* Container  */
         .container {
             max-width: 900px;
             margin: 2.5rem auto;
@@ -49,6 +50,7 @@
             box-shadow: 0 4px 24px rgba(0,0,0,0.09);
         }
 
+        /* Sections  */
         section {
             margin-bottom: 2.5rem;
             padding-bottom: 1.5rem;
@@ -121,35 +123,25 @@
             }
         }
     </style>
-
+</head>
 <body>
     <header>
         <h1>Portfolio Git</h1>
         <p>Aprenda os principais conceitos, fluxo de trabalho e como resolver conflitos no Git e GitHub.</p>
     </header>
     <div class="container">
+        <!--Seção Conceitos Git e GitHub-->
         <section>
             <h2>Conceitos Git e GitHub</h2>
-            <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="Logo Git"
-                style="max-width:150px;">
-            <p>
-                <strong>O que é Git?</strong><br>
-                Git é um sistema de controle de versão distribuído, criado para gerenciar e acompanhar alterações em
-                arquivos de projetos, especialmente de código-fonte. Ele permite que você registre o histórico de
-                modificações, trabalhe em diferentes versões e colabore com outras pessoas de forma eficiente.
-            </p>
-            <p>
-                <strong>O que é GitHub?</strong><br>
-                GitHub é uma plataforma online que hospeda repositórios Git, facilitando o compartilhamento de projetos,
-                colaboração em equipe e integração com ferramentas de desenvolvimento. No GitHub, você pode contribuir
-                com projetos open source, gerenciar issues e realizar revisões de código.
-            </p>
+            <div class="explica">
+                <strong>Git</strong> é um programa que guarda todas as versões do seu projeto. Se você errar, pode voltar atrás. Se você quiser testar algo novo, pode criar uma cópia do projeto só para isso.<br><br>
+                <strong>GitHub</strong> é um site onde você salva seu projeto para acessar de qualquer lugar e compartilhar com outras pessoas. É como um "Google Drive" só que para projetos de programação.
+            </div>
+            <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="Logo Git" style="max-width:150px;">
             <ul>
                 <li><strong>Repository:</strong> Pasta do projeto com controle de versão.</li>
-                <li><strong>Commit:</strong> Registro de uma alteração feita no projeto, acompanhado de uma mensagem
-                    descritiva.</li>
-                <li><strong>Branch:</strong> Linha paralela de desenvolvimento, útil para trabalhar em novas
-                    funcionalidades sem afetar o código principal.</li>
+                <li><strong>Commit:</strong> Registro de uma alteração feita no projeto, acompanhado de uma mensagem descritiva.</li>
+                <li><strong>Branch:</strong> Linha paralela de desenvolvimento, útil para trabalhar em novas funcionalidades sem afetar o código principal.</li>
                 <li><strong>Merge:</strong> Combina alterações de diferentes branches.</li>
                 <li><strong>Push:</strong> Envia commits locais para o repositório remoto (GitHub).</li>
                 <li><strong>Pull:</strong> Baixa alterações do repositório remoto para o local.</li>
@@ -162,89 +154,64 @@
                 <li><strong>Committed:</strong> Arquivo salvo no histórico do Git.</li>
             </ul>
         </section>
+        <!--Seção Fluxo de Trabalho-->
         <section>
             <h2>Fluxo de Trabalho com Git e GitHub</h2>
-            <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*ZpFQwZ5qX6Fz7h6rQ3bYXA.png"
-                alt="Fluxo Git">
-            <p>
-                O fluxo de trabalho com Git e GitHub segue uma sequência lógica para garantir organização, colaboração e
-                segurança no desenvolvimento de projetos. Veja o passo a passo:
-            </p>
-            <ol>
-                <li>
-                    <strong>Clonar o repositório:</strong><br>
-                    Baixe uma cópia do projeto para sua máquina.<br>
-                    <code>git clone &lt;url-do-repositorio&gt;</code>
-                </li>
-                <li>
-                    <strong>Criar uma branch:</strong><br>
-                    Crie uma linha de desenvolvimento separada para trabalhar em novas funcionalidades ou correções sem
-                    afetar o código principal.<br>
-                    <code>git checkout -b nome-da-branch</code>
-                </li>
-                <li>
-                    <strong>Fazer alterações:</strong><br>
-                    Edite, adicione ou remova arquivos conforme necessário. Teste suas mudanças localmente.
-                </li>
-                <li>
-                    <strong>Adicionar arquivos ao stage:</strong><br>
-                    Prepare os arquivos modificados para serem incluídos no próximo commit.<br>
-                    <code>git add .</code> ou <code>git add nome-do-arquivo</code>
-                </li>
-                <li>
-                    <strong>Realizar um commit:</strong><br>
-                    Salve um ponto do histórico do projeto com uma mensagem clara sobre o que foi alterado.<br>
-                    <code>git commit -m "Descreva sua alteração"</code>
-                </li>
-                <li>
-                    <strong>Sincronizar com o repositório remoto:</strong><br>
-                    Envie suas alterações para o GitHub.<br>
-                    <code>git push origin nome-da-branch</code>
-                </li>
-                <li>
-                    <strong>Abrir um Pull Request:</strong><br>
-                    No GitHub, solicite a revisão e integração das suas mudanças na branch principal. Explique o que foi
-                    feito e aguarde aprovação.
-                </li>
-                <li>
-                    <strong>Atualizar seu repositório local:</strong><br>
-                    Antes de começar novas alterações, baixe as últimas atualizações do projeto.<br>
-                    <code>git pull origin main</code>
-                </li>
-                <li>
-                    <strong>Mesclar branches:</strong><br>
-                    Após aprovação do Pull Request, as alterações são integradas à branch principal. Se necessário, faça
-                    o merge localmente:<br>
-                    <code>git checkout main</code><br>
-                    <code>git merge nome-da-branch</code>
-                </li>
-            </ol>
-            <p>
+            <div class="explica">
+                <strong>Fluxo de trabalho</strong> é o passo a passo para usar o Git e o GitHub. Siga cada etapa e você não vai se perder!
+            </div>
+            <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*ZpFQwZ5qX6Fz7h6rQ3bYXA.png" alt="Fluxo Git">
+            <div class="passo"><strong>1. Clonar o repositório:</strong> Baixe uma cópia do projeto para sua máquina.<br>
+                <code>git clone &lt;url-do-repositorio&gt;</code>
+            </div>
+            <div class="passo"><strong>2. Criar uma branch:</strong> Crie uma linha de desenvolvimento separada para trabalhar em novas funcionalidades ou correções sem afetar o código principal.<br>
+                <code>git checkout -b nome-da-branch</code>
+            </div>
+            <div class="passo"><strong>3. Fazer alterações:</strong> Edite, adicione ou remova arquivos conforme necessário. Teste suas mudanças localmente.</div>
+            <div class="passo"><strong>4. Adicionar arquivos ao stage:</strong> Prepare os arquivos modificados para serem incluídos no próximo commit.<br>
+                <code>git add .</code> ou <code>git add nome-do-arquivo</code>
+            </div>
+            <div class="passo"><strong>5. Realizar um commit:</strong> Salve um ponto do histórico do projeto com uma mensagem clara sobre o que foi alterado.<br>
+                <code>git commit -m "Descreva sua alteração"</code>
+            </div>
+            <div class="passo"><strong>6. Sincronizar com o repositório remoto:</strong> Envie suas alterações para o GitHub.<br>
+                <code>git push origin nome-da-branch</code>
+            </div>
+            <div class="passo"><strong>7. Abrir um Pull Request:</strong> No GitHub, solicite a revisão e integração das suas mudanças na branch principal. Explique o que foi feito e aguarde aprovação.</div>
+            <div class="passo"><strong>8. Atualizar seu repositório local:</strong> Antes de começar novas alterações, baixe as últimas atualizações do projeto.<br>
+                <code>git pull origin main</code>
+            </div>
+            <div class="passo"><strong>9. Mesclar branches:</strong> Após aprovação do Pull Request, as alterações são integradas à branch principal. Se necessário, faça o merge localmente:<br>
+                <code>git checkout main</code><br>
+                <code>git merge nome-da-branch</code>
+            </div>
+            <div class="dica">
                 <strong>Dicas:</strong><br>
                 - Sempre trabalhe em branches separadas para cada tarefa.<br>
                 - Escreva mensagens de commit claras e objetivas.<br>
                 - Sincronize seu repositório local com frequência usando <code>git pull</code>.<br>
                 - Revise e teste suas alterações antes de enviar para o repositório remoto.
-            <section>
-                <h2>Como Resolver Conflitos</h2>
-                <img src="https://wac-cdn.atlassian.com/dam/jcr:7d8f8e7a-7e8e-4e3a-9e2c-8e2e8e2e8e2e/git-merge-conflict.png?cdnVersion=1107"
-                    alt="Conflitos Git">
-                <p>
-                    Conflitos acontecem quando duas pessoas alteram a mesma linha de um arquivo ou arquivos diferentes
-                    que afetam o mesmo trecho do código. O Git não consegue decidir qual alteração manter e pede que o
-                    usuário resolva manualmente.
-                </p>
-                <ol>
-                    <li>Ao tentar fazer um <strong>merge</strong> ou <strong>pull</strong>, o Git avisa sobre o
-                        conflito.</li>
-                    <li>Abra o arquivo indicado e procure por marcações como
-                        <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> e
-                        <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; branch</code>.
-                    </li>
-                    <li>Escolha qual versão manter ou combine as alterações.</li>
-                    <li>Remova as marcações do Git.</li>
-                    <li>Adicione o arquivo resolvido ao stage: <code>git add arquivo</code></li>
-                    <li>Finalize com um commit: <code>git commit -m "Resolve conflito"</code></li>
-                </ol>
-                <p>
-                    Dica: Use editores como VS Code, que facilitam a visualização e resolução de conflitos.
+            </div>
+        </section>
+        <!--Seção Como Resolver Conflitos-->
+        <section>
+            <h2>Como Resolver Conflitos</h2>
+            <div class="explica">
+                <strong>Conflito</strong> é quando duas pessoas mudam o mesmo arquivo ao mesmo tempo. O Git não sabe qual versão escolher, então pede sua ajuda para resolver.
+            </div>
+            <img src="https://wac-cdn.atlassian.com/dam/jcr:7d8f8e7a-7e8e-4e3a-9e2c-8e2e8e2e8e2e/git-merge-conflict.png?cdnVersion=1107" alt="Conflitos Git">
+            <ol>
+                <li>Ao tentar fazer um <strong>merge</strong> ou <strong>pull</strong>, o Git avisa sobre o conflito.</li>
+                <li>Abra o arquivo indicado e procure por marcações como <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> e <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; branch</code>.</li>
+                <li>Escolha qual versão manter ou combine as alterações.</li>
+                <li>Remova as marcações do Git.</li>
+                <li>Adicione o arquivo resolvido ao stage: <code>git add arquivo</code></li>
+                <li>Finalize com um commit: <code>git commit -m "Resolve conflito"</code></li>
+            </ol>
+            <div class="dica">
+                Dica: Use editores como VS Code, que facilitam a visualização e resolução de conflitos.
+            </div>
+        </section>
+    </div>
+</body>
+</html>
