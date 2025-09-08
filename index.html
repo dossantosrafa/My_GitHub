@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Git</title>
+
+</head>
+<style>
+    /* Reset básico */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        background: linear-gradient(120deg, #f4f4f4 60%, #e3eafc 100%);
+        color: #222;
+    }
+
+    header {
+        background: linear-gradient(90deg, #222 60%, #3a3a3a 100%);
+        color: #fff;
+        padding: 2.5rem 0 1.5rem 0;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+        margin-bottom: 0.5rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+        opacity: 0.85;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 2.5rem auto;
+        background: #fff;
+        padding: 2.5rem 2rem;
+        border-radius: 14px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.09);
+    }
+
+    section {
+        margin-bottom: 2.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid #eaeaea;
+    }
+
+    section:last-child {
+        border-bottom: none;
+    }
+
+    section img {
+        display: block;
+        max-width: 320px;
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin: 0.5rem auto 1.2rem auto;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+    }
+
+    h2 {
+        color: #2a4d8f;
+        font-size: 1.7rem;
+        margin-bottom: 1rem;
+        letter-spacing: 1px;
+    }
+
+    p {
+        color: #444;
+        font-size: 1.08rem;
+        margin-bottom: 1rem;
+        line-height: 1.7;
+    }
+
+    ul,
+    ol {
+        margin-left: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    ul li,
+    ol li {
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+    }
+
+    code {
+        background: #e3eafc;
+        color: #2a4d8f;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 0.97em;
+    }
+
+    strong {
+        color: #2a4d8f;
+    }
+
+    /* Responsividade */
+    @media (max-width: 600px) {
+        .container {
+            padding: 1.2rem 0.5rem;
+        }
+
+        header h1 {
+            font-size: 1.6rem;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+        }
+
+        section img {
+            max-width: 100%;
+        }
+    }
+
+    footer {
+        background: #222;
+        color: #fff;
+        text-align: center;
+        padding: 1.2rem 0;
+        font-size: 1rem;
+        margin-top: 2rem;
+        border-top-left-radius: 14px;
+        border-top-right-radius: 14px;
+    }
+</style>
+
+<body>
+    <header>
+        <h1>Portfolio Git</h1>
+        <p>Aprenda os principais conceitos, fluxo de trabalho e como resolver conflitos no Git e GitHub.</p>
+    </header>
+    <div class="container">
+        <!--Seção Conceitos Git e GitHub-->
+        <section>
+            <h2>Conceitos Git e GitHub</h2>
+            <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="Logo Git"
+                style="max-width:150px;">
+            <p>
+                <strong>O que é Git?</strong><br>
+                Git é um sistema de controle de versão distribuído, criado para gerenciar e acompanhar alterações em
+                arquivos de projetos, especialmente de código-fonte. Ele permite que você registre o histórico de
+                modificações, trabalhe em diferentes versões e colabore com outras pessoas de forma eficiente.
+            </p>
+            <p>
+                <strong>O que é GitHub?</strong><br>
+                GitHub é uma plataforma online que hospeda repositórios Git, facilitando o compartilhamento de projetos,
+                colaboração em equipe e integração com ferramentas de desenvolvimento. No GitHub, você pode contribuir
+                com projetos open source, gerenciar issues e realizar revisões de código.
+            </p>
+            <ul>
+                <li><strong>Repository:</strong> Pasta do projeto com controle de versão.</li>
+                <li><strong>Commit:</strong> Registro de uma alteração feita no projeto, acompanhado de uma mensagem
+                    descritiva.</li>
+                <li><strong>Branch:</strong> Linha paralela de desenvolvimento, útil para trabalhar em novas
+                    funcionalidades sem afetar o código principal.</li>
+                <li><strong>Merge:</strong> Combina alterações de diferentes branches.</li>
+                <li><strong>Push:</strong> Envia commits locais para o repositório remoto (GitHub).</li>
+                <li><strong>Pull:</strong> Baixa alterações do repositório remoto para o local.</li>
+                <li><strong>Clone:</strong> Faz uma cópia completa de um repositório remoto.</li>
+            </ul>
+            <ul>
+                <li><strong>Untracked:</strong> Arquivo novo que o Git ainda não monitora.</li>
+                <li><strong>Modified:</strong> Arquivo alterado desde o último commit.</li>
+                <li><strong>Staged:</strong> Arquivo pronto para ser incluído no próximo commit.</li>
+                <li><strong>Committed:</strong> Arquivo salvo no histórico do Git.</li>
+            </ul>
+        </section>
+        <!--Seção Fluxo de Trabalho-->
+        <section>
+            <h2>Fluxo de Trabalho com Git e GitHub</h2>
+            <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="Logo Git"
+                style="max-width:150px;">
+            <p>
+                O fluxo de trabalho com Git e GitHub segue uma sequência lógica para garantir organização, colaboração e
+                segurança no desenvolvimento de projetos. Veja o passo a passo:
+            </p>
+            <ol>
+                <li>
+                    <strong>Clonar o repositório:</strong><br>
+                    Baixe uma cópia do projeto para sua máquina.<br>
+                    <code>git clone &lt;url-do-repositorio&gt;</code>
+                </li>
+                <li>
+                    <strong>Criar uma branch:</strong><br>
+                    Crie uma linha de desenvolvimento separada para trabalhar em novas funcionalidades ou correções sem
+                    afetar o código principal.<br>
+                    <code>git checkout -b nome-da-branch</code>
+                </li>
+                <li>
+                    <strong>Fazer alterações:</strong><br>
+                    Edite, adicione ou remova arquivos conforme necessário. Teste suas mudanças localmente.
+                </li>
+                <li>
+                    <strong>Adicionar arquivos ao stage:</strong><br>
+                    Prepare os arquivos modificados para serem incluídos no próximo commit.<br>
+                    <code>git add .</code> ou <code>git add nome-do-arquivo</code>
+                </li>
+                <li>
+                    <strong>Realizar um commit:</strong><br>
+                    Salve um ponto do histórico do projeto com uma mensagem clara sobre o que foi alterado.<br>
+                    <code>git commit -m "Descreva sua alteração"</code>
+                </li>
+                <li>
+                    <strong>Sincronizar com o repositório remoto:</strong><br>
+                    Envie suas alterações para o GitHub.<br>
+                    <code>git push origin nome-da-branch</code>
+                </li>
+                <li>
+                    <strong>Abrir um Pull Request:</strong><br>
+                    No GitHub, solicite a revisão e integração das suas mudanças na branch principal. Explique o que foi
+                    feito e aguarde aprovação.
+                </li>
+                <li>
+                    <strong>Atualizar seu repositório local:</strong><br>
+                    Antes de começar novas alterações, baixe as últimas atualizações do projeto.<br>
+                    <code>git pull origin main</code>
+                </li>
+                <li>
+                    <strong>Mesclar branches:</strong><br>
+                    Após aprovação do Pull Request, as alterações são integradas à branch principal. Se necessário, faça
+                    o merge localmente:<br>
+                    <code>git checkout main</code><br>
+                    <code>git merge nome-da-branch</code>
+                </li>
+            </ol>
+            <p>
+                <strong>Dicas:</strong><br>
+                - Sempre trabalhe em branches separadas para cada tarefa.<br>
+                - Escreva mensagens de commit claras e objetivas.<br>
+                - Sincronize seu repositório local com frequência usando <code>git pull</code>.<br>
+                - Revise e teste suas alterações antes de enviar para o repositório remoto.
+            </p>
+        </section>
+        <!--Seção Como Resolver Conflitos-->
+        <section>
+            <h2>Como Resolver Conflitos</h2>
+            <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="Logo Git"
+                style="max-width:150px;">
+            <p>
+                Conflitos acontecem quando duas pessoas alteram a mesma linha de um arquivo ou arquivos diferentes
+                que afetam o mesmo trecho do código. O Git não consegue decidir qual alteração manter e pede que o
+                usuário resolva manualmente.
+            </p>
+            <ol>
+                <li>Ao tentar fazer um <strong>merge</strong> ou <strong>pull</strong>, o Git avisa sobre o
+                    conflito.</li>
+                <li>Abra o arquivo indicado e procure por marcações como
+                    <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> e
+                    <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; branch</code>.
+                </li>
+                <li>Escolha qual versão manter ou combine as alterações.</li>
+                <li>Remova as marcações do Git.</li>
+                <li>Adicione o arquivo resolvido ao stage: <code>git add arquivo</code></li>
+                <li>Finalize com um commit: <code>git commit -m "Resolve conflito"</code></li>
+            </ol>
+            <p>
+                Dica: Use editores como VS Code, que facilitam a visualização e resolução de conflitos.
+            </p>
+        </section>
+    </div>
+    <!--Rodapé do site-->
+    <footer>
+        Desenvolvido por Rafael Fontana dos Santos &mdash; Matéria Projeto Integrador<br>
+        Professor Rafael
+    </footer>
+</body>
+
+</html>
